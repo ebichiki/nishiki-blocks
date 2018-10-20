@@ -32,12 +32,14 @@
   .wp-block-nishiki-hukidashi p.text {
     position: relative; }
   .wp-block-nishiki-hukidashi .image {
-    -ms-flex-preferred-size: 70px;
-        flex-basis: 70px;
+    -ms-flex-preferred-size: 96px;
+        flex-basis: 96px;
     -ms-flex-negative: 0;
-        flex-shrink: 0; }
-    .wp-block-nishiki-hukidashi .image img {
-      vertical-align: bottom; }
+        flex-shrink: 0;
+    text-align: center; }
+    .wp-block-nishiki-hukidashi .image img.icon-image {
+      vertical-align: bottom;
+      max-width: 64px; }
   .wp-block-nishiki-hukidashi.animation-vibration p {
     display: inline-block;
     -webkit-animation: vibration .1s  infinite;
@@ -153,12 +155,12 @@
   .wp-block-nishiki-hukidashi {
     display: block; }
     .wp-block-nishiki-hukidashi .image {
-      max-width: 70px; }
+      max-width: 96px; }
     .wp-block-nishiki-hukidashi.baloon-left.type-serif p {
       display: inline-block; }
       .wp-block-nishiki-hukidashi.baloon-left.type-serif p::after {
         top: 0;
-        left: 2.3rem;
+        left: 2.9rem;
         width: 0;
         height: 0;
         border: 20px solid transparent;
@@ -169,11 +171,11 @@
     .wp-block-nishiki-hukidashi.baloon-left.type-think p {
       display: inline-block; }
       .wp-block-nishiki-hukidashi.baloon-left.type-think p::before {
-        left: -2px;
-        top: -16px; }
+        left: 36px;
+        top: -8px; }
       .wp-block-nishiki-hukidashi.baloon-left.type-think p::after {
-        left: 0;
-        top: -28px; }
+        left: 47px;
+        top: -20px; }
     .wp-block-nishiki-hukidashi.baloon-right {
       text-align: right; }
       .wp-block-nishiki-hukidashi.baloon-right.type-serif .image {
@@ -183,7 +185,7 @@
         display: inline-block; }
         .wp-block-nishiki-hukidashi.baloon-right.type-serif p::after {
           top: 0;
-          right: 2.3rem;
+          right: 2.9rem;
           width: 0;
           height: 0;
           border: 20px solid transparent;
@@ -197,11 +199,11 @@
       .wp-block-nishiki-hukidashi.baloon-right.type-think p {
         display: inline-block; }
         .wp-block-nishiki-hukidashi.baloon-right.type-think p::before {
-          right: -2px;
-          top: -16px; }
+          right: 36px;
+          top: -8px; }
         .wp-block-nishiki-hukidashi.baloon-right.type-think p::after {
-          right: 0;
-          top: -28px; } }
+          right: 47px;
+          top: -20px; } }
 /**
  * #.# Common SCSS
  *

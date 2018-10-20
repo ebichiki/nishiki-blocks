@@ -35,11 +35,13 @@
   }
 
   .image{
-    flex-basis: 70px;
+    flex-basis: 96px;
     flex-shrink: 0;
+    text-align: center;
 
-    img{
+    img.icon-image{
       vertical-align: bottom;
+      max-width: 64px;
     }
   }
 
@@ -193,7 +195,7 @@
     display: block;
 
     .image{
-     max-width:70px;
+     max-width:96px;
     }
 
     &.baloon-left{
@@ -204,7 +206,7 @@
 
           &::after{
             top: 0;
-            left: 2.3rem;
+            left: 2.9rem;
             width: 0;
             height: 0;
             border: 20px solid transparent;
@@ -219,15 +221,15 @@
       &.type-think{
         p{
           display: inline-block;
-          
+
           &::before{
-            left: -2px;
-            top: -16px;
+            left: 36px;
+            top: -8px;
           }
 
           &::after{
-            left: 0;
-            top: -28px;
+            left: 47px;
+            top: -20px;
           }
         }
       }
@@ -249,7 +251,7 @@
 
           &::after{
             top: 0;
-            right: 2.3rem;
+            right: 2.9rem;
             width: 0;
             height: 0;
             border: 20px solid transparent;
@@ -271,13 +273,13 @@
           display: inline-block;
 
           &::before{
-            right: -2px;
-            top: -16px;
+            right: 36px;
+            top: -8px;
           }
 
           &::after{
-            right: 0;
-            top: -28px;
+            right: 47px;
+            top: -20px;
           }
         }
       }

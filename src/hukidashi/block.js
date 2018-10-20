@@ -179,13 +179,14 @@ registerBlockType( 'nishiki/hukidashi', {
 						<MediaUpload
 							onSelect={ onImageSelect }
 							type="image"
+							className={ 'icon-image' }
 							value={ backgroundImage }
 							render={ ( { open } ) => (
 								<Button
 									onClick={ open }
 									className={ backgroundImage ? 'image-button' : 'button button-large' }
 								>
-									{ ! backgroundImage ? 'アイコン選択' : <img src={ backgroundImage } alt={ hukidashiName ? hukidashiName : '画像アップロード' } /> }
+									{ ! backgroundImage ? 'アイコン選択' : <img className={ 'icon-image' } src={ backgroundImage } alt={ hukidashiName ? hukidashiName : '画像アップロード' } /> }
 								</Button>
 							)}
 						/>
@@ -229,6 +230,7 @@ registerBlockType( 'nishiki/hukidashi', {
 					{ backgroundImage ?
 						<figure>
 							<img
+								className={ 'icon-image' }
 								src={ backgroundImage }
 								alt={ hukidashiName ?
 									`${hukidashiName}` : '' }
