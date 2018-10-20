@@ -28,11 +28,6 @@
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
-  .wp-block-nishiki-hukidashi .image {
-    -ms-flex-preferred-size: 70px;
-        flex-basis: 70px; }
-  .wp-block-nishiki-hukidashi img {
-    vertical-align: bottom; }
   .wp-block-nishiki-hukidashi figure {
     margin: 0; }
   .wp-block-nishiki-hukidashi figcaption {
@@ -42,6 +37,13 @@
     margin-top: 0.2rem; }
   .wp-block-nishiki-hukidashi p.text {
     position: relative; }
+  .wp-block-nishiki-hukidashi .image {
+    -ms-flex-preferred-size: 70px;
+        flex-basis: 70px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    .wp-block-nishiki-hukidashi .image img {
+      vertical-align: bottom; }
   .wp-block-nishiki-hukidashi.animation-vibration p {
     display: inline-block;
     -webkit-animation: vibration .1s  infinite;
@@ -148,6 +150,64 @@
   100% {
     -webkit-transform: translate(0px, 0px) rotateZ(0deg);
             transform: translate(0px, 0px) rotateZ(0deg); } }
+
+/*********************
+* SmartPhone
+0px - 480px
+***********************/
+@media only screen and (max-width: 480px) {
+  .wp-block-nishiki-hukidashi {
+    display: block; }
+    .wp-block-nishiki-hukidashi .image {
+      max-width: 70px; }
+    .wp-block-nishiki-hukidashi.baloon-left.type-serif p {
+      display: inline-block; }
+      .wp-block-nishiki-hukidashi.baloon-left.type-serif p::after {
+        top: 0;
+        left: 2.3rem;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-bottom-color: inherit;
+        border-top: 0;
+        margin-left: -20px;
+        margin-top: -20px; }
+    .wp-block-nishiki-hukidashi.baloon-left.type-think p {
+      display: inline-block; }
+      .wp-block-nishiki-hukidashi.baloon-left.type-think p::before {
+        left: -2px;
+        top: -16px; }
+      .wp-block-nishiki-hukidashi.baloon-left.type-think p::after {
+        left: 0;
+        top: -28px; }
+    .wp-block-nishiki-hukidashi.baloon-right {
+      text-align: right; }
+      .wp-block-nishiki-hukidashi.baloon-right.type-serif .image {
+        margin-left: auto;
+        margin-right: 0; }
+      .wp-block-nishiki-hukidashi.baloon-right.type-serif p {
+        display: inline-block; }
+        .wp-block-nishiki-hukidashi.baloon-right.type-serif p::after {
+          top: 0;
+          right: 2.3rem;
+          width: 0;
+          height: 0;
+          border: 20px solid transparent;
+          border-bottom-color: inherit;
+          border-top: 0;
+          margin-left: -20px;
+          margin-top: -20px; }
+      .wp-block-nishiki-hukidashi.baloon-right.type-think .image {
+        margin-left: auto;
+        margin-right: 0; }
+      .wp-block-nishiki-hukidashi.baloon-right.type-think p {
+        display: inline-block; }
+        .wp-block-nishiki-hukidashi.baloon-right.type-think p::before {
+          right: -2px;
+          top: -16px; }
+        .wp-block-nishiki-hukidashi.baloon-right.type-think p::after {
+          right: 0;
+          top: -28px; } }
 /**
  * #.# Common SCSS
  *

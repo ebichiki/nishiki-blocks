@@ -17,14 +17,6 @@
   display: flex;
   align-items: center;
 
-  .image{
-    flex-basis: 70px;
-  }
-
-  img{
-    vertical-align: bottom;
-  }
-
   figure{
     margin:0;
   }
@@ -42,6 +34,14 @@
     }
   }
 
+  .image{
+    flex-basis: 70px;
+    flex-shrink: 0;
+
+    img{
+      vertical-align: bottom;
+    }
+  }
 
   &.animation-vibration{
     p{
@@ -175,13 +175,113 @@
 
 }
 
-.speech-bubble:after {
-}
-
 @keyframes vibration {
   0% {transform: translate(0px, 0px) rotateZ(0deg)}
   25% {transform: translate(2px, 2px) rotateZ(1deg)}
   50% {transform: translate(0px, 2px) rotateZ(0deg)}
   75% {transform: translate(2px, 0px) rotateZ(-1deg)}
   100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+
+/*********************
+* SmartPhone
+0px - 480px
+***********************/
+@media only screen and (max-width: 480px) {
+  .wp-block-nishiki-hukidashi{
+    display: block;
+
+    .image{
+     max-width:70px;
+    }
+
+    &.baloon-left{
+      &.type-serif{
+
+        p{
+          display: inline-block;
+
+          &::after{
+            top: 0;
+            left: 2.3rem;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-bottom-color: inherit;
+            border-top: 0;
+            margin-left: -20px;
+            margin-top: -20px;
+          }
+        }
+      }
+
+      &.type-think{
+        p{
+          display: inline-block;
+          
+          &::before{
+            left: -2px;
+            top: -16px;
+          }
+
+          &::after{
+            left: 0;
+            top: -28px;
+          }
+        }
+      }
+
+    }
+
+
+    &.baloon-right{
+      text-align: right;
+
+      &.type-serif{
+        .image{
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        p{
+          display: inline-block;
+
+          &::after{
+            top: 0;
+            right: 2.3rem;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-bottom-color: inherit;
+            border-top: 0;
+            margin-left: -20px;
+            margin-top: -20px;
+          }
+        }
+      }
+
+      &.type-think{
+        .image{
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        p{
+          display: inline-block;
+
+          &::before{
+            right: -2px;
+            top: -16px;
+          }
+
+          &::after{
+            right: 0;
+            top: -28px;
+          }
+        }
+      }
+    }
+
+  }
 }
