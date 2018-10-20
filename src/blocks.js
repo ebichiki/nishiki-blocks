@@ -11,4 +11,3 @@
 
 import './hukidashi/block.js';
 import './frame/block.js';
-
