@@ -5,18 +5,8 @@
  * that are used across the project.
 */
 /**
- * #.# Styles
- *
- * CSS for both Frontend+Backend.
+ Hukidashi Block
  */
-.wp-block-nishiki-editable {
-  background: orangered;
-  border: 0.2rem solid #292929;
-  color: #292929;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem; }
-
 .wp-block-nishiki-hukidashi {
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +20,8 @@
     font-size: 0.7rem;
     margin-top: 0.2rem; }
   .wp-block-nishiki-hukidashi p.text {
-    position: relative; }
+    position: relative;
+    text-align: left; }
   .wp-block-nishiki-hukidashi .image {
     -ms-flex-preferred-size: 96px;
         flex-basis: 96px;
@@ -113,6 +104,9 @@
       right: -35px;
       top: 20px; }
 
+/**
+ Animation Vibration
+ */
 @-webkit-keyframes vibration {
   0% {
     -webkit-transform: translate(0px, 0px) rotateZ(0deg);
@@ -129,7 +123,6 @@
   100% {
     -webkit-transform: translate(0px, 0px) rotateZ(0deg);
             transform: translate(0px, 0px) rotateZ(0deg); } }
-
 @keyframes vibration {
   0% {
     -webkit-transform: translate(0px, 0px) rotateZ(0deg);
@@ -211,9 +204,7 @@
  * that are used across the project.
 */
 /**
- * #.# Styles
- *
- * CSS for both Frontend+Backend.
+ Frame Block
  */
 .wp-block-nishiki-frame {
   margin: 1.5rem 0; }
