@@ -1,0 +1,188 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-cgb-block-nishiki-blocks {
+  background: #bada55;
+  border: 0.2rem solid #292929;
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-nishiki-editable {
+  background: orangered;
+  border: 0.2rem solid #292929;
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem; }
+
+.wp-block-nishiki-hukidashi {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .wp-block-nishiki-hukidashi .image {
+    -ms-flex-preferred-size: 70px;
+        flex-basis: 70px; }
+  .wp-block-nishiki-hukidashi img {
+    vertical-align: bottom; }
+  .wp-block-nishiki-hukidashi figure {
+    margin: 0; }
+  .wp-block-nishiki-hukidashi figcaption {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 0.2rem; }
+  .wp-block-nishiki-hukidashi p.text {
+    position: relative; }
+  .wp-block-nishiki-hukidashi.animation-vibration p {
+    display: inline-block;
+    -webkit-animation: vibration .1s  infinite;
+            animation: vibration .1s  infinite; }
+  .wp-block-nishiki-hukidashi.type-serif p {
+    background: #f5f5f5;
+    border-color: #f5f5f5;
+    border-radius: .4em;
+    padding: 1.1rem 1.4rem;
+    margin: 1.5rem 0; }
+    .wp-block-nishiki-hukidashi.type-serif p::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent; }
+  .wp-block-nishiki-hukidashi.type-think p {
+    background: #f5f5f5;
+    border-radius: 2rem;
+    padding: 1.1rem 1.4rem;
+    margin: 1.5rem 0; }
+    .wp-block-nishiki-hukidashi.type-think p::before {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background: inherit; }
+    .wp-block-nishiki-hukidashi.type-think p::after {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background: inherit; }
+  .wp-block-nishiki-hukidashi.baloon-left.type-serif .image {
+    margin-right: 2rem; }
+  .wp-block-nishiki-hukidashi.baloon-left.type-serif p::after {
+    left: 0;
+    top: 50%;
+    border-right-color: inherit;
+    border-left: 0;
+    margin-top: -20px;
+    margin-left: -20px; }
+  .wp-block-nishiki-hukidashi.baloon-left.type-think .image {
+    margin-right: 2.5rem; }
+  .wp-block-nishiki-hukidashi.baloon-left.type-think p::before {
+    left: -22px;
+    top: 7px; }
+  .wp-block-nishiki-hukidashi.baloon-left.type-think p::after {
+    left: -35px;
+    top: 20px; }
+  .wp-block-nishiki-hukidashi.baloon-right {
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse; }
+    .wp-block-nishiki-hukidashi.baloon-right.type-serif .image {
+      margin-left: 2rem; }
+    .wp-block-nishiki-hukidashi.baloon-right.type-serif p::after {
+      right: 0;
+      top: 50%;
+      border-left-color: inherit;
+      border-right: 0;
+      margin-top: -20px;
+      margin-right: -20px; }
+    .wp-block-nishiki-hukidashi.baloon-right.type-think .image {
+      margin-left: 2.5rem; }
+    .wp-block-nishiki-hukidashi.baloon-right.type-think p::before {
+      right: -22px;
+      top: 7px; }
+    .wp-block-nishiki-hukidashi.baloon-right.type-think p::after {
+      right: -35px;
+      top: 20px; }
+
+@-webkit-keyframes vibration {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotateZ(0deg);
+            transform: translate(0px, 0px) rotateZ(0deg); }
+  25% {
+    -webkit-transform: translate(2px, 2px) rotateZ(1deg);
+            transform: translate(2px, 2px) rotateZ(1deg); }
+  50% {
+    -webkit-transform: translate(0px, 2px) rotateZ(0deg);
+            transform: translate(0px, 2px) rotateZ(0deg); }
+  75% {
+    -webkit-transform: translate(2px, 0px) rotateZ(-1deg);
+            transform: translate(2px, 0px) rotateZ(-1deg); }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotateZ(0deg);
+            transform: translate(0px, 0px) rotateZ(0deg); } }
+
+@keyframes vibration {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotateZ(0deg);
+            transform: translate(0px, 0px) rotateZ(0deg); }
+  25% {
+    -webkit-transform: translate(2px, 2px) rotateZ(1deg);
+            transform: translate(2px, 2px) rotateZ(1deg); }
+  50% {
+    -webkit-transform: translate(0px, 2px) rotateZ(0deg);
+            transform: translate(0px, 2px) rotateZ(0deg); }
+  75% {
+    -webkit-transform: translate(2px, 0px) rotateZ(-1deg);
+            transform: translate(2px, 0px) rotateZ(-1deg); }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotateZ(0deg);
+            transform: translate(0px, 0px) rotateZ(0deg); } }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-nishiki-frame {
+  margin: 1.5rem 0; }
