@@ -14,6 +14,11 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
 const { RangeControl, RadioControl, PanelBody, Button, PanelColor } = wp.components;
 const { InnerBlocks, InspectorControls, ColorPalette } = wp.editor;
 const { Fragment } = wp.element;
+const BlockIcon = (
+	<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+		<path d="M10.69,149.5A10.2,10.2,0,0,1,.5,139.31V10.69A10.2,10.2,0,0,1,10.69.5H139.31A10.2,10.2,0,0,1,149.5,10.69V139.31a10.2,10.2,0,0,1-10.19,10.19Zm2.16-145A8.36,8.36,0,0,0,4.5,12.85v124.3a8.36,8.36,0,0,0,8.35,8.35h124.3a8.36,8.36,0,0,0,8.35-8.35V12.85a8.36,8.36,0,0,0-8.35-8.35Z"/><path d="M139.31,1A9.7,9.7,0,0,1,149,10.69V139.31a9.7,9.7,0,0,1-9.69,9.69H10.69A9.7,9.7,0,0,1,1,139.31V10.69A9.7,9.7,0,0,1,10.69,1H139.31M12.85,146h124.3a8.86,8.86,0,0,0,8.85-8.85V12.85A8.86,8.86,0,0,0,137.15,4H12.85A8.86,8.86,0,0,0,4,12.85v124.3A8.86,8.86,0,0,0,12.85,146M139.31,0H10.69A10.72,10.72,0,0,0,0,10.69V139.31A10.72,10.72,0,0,0,10.69,150H139.31A10.72,10.72,0,0,0,150,139.31V10.69A10.72,10.72,0,0,0,139.31,0ZM12.85,145A7.87,7.87,0,0,1,5,137.15V12.85A7.87,7.87,0,0,1,12.85,5h124.3A7.87,7.87,0,0,1,145,12.85v124.3a7.87,7.87,0,0,1-7.85,7.85Z"/>
+	</svg>
+);
 
 /**
  * Register: aa Gutenberg Block.
@@ -29,11 +34,10 @@ const { Fragment } = wp.element;
  *                             registered; otherwise `undefined`.
  */
 
-
 registerBlockType( 'nishiki/frame', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 	title: __( 'フレーム' ), // Block title.
-	icon: 'welcome-widgets-menus', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	icon: BlockIcon, // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'nishiki-blocks', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
 		__( 'nishiki' ),
@@ -151,7 +155,6 @@ registerBlockType( 'nishiki/frame', {
 				>
 					<InnerBlocks />
 				</div>
-
 			</Fragment>
 		];
 

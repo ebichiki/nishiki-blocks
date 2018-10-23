@@ -9,5 +9,6 @@
  * Webpack is compiling as the input file.
  */
 
-import './hukidashi/block.js';
+import './baloon/block.js';
 import './frame/block.js';
+import './section/block.js';

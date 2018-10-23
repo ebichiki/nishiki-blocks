@@ -1,0 +1,47 @@
+/**
+ Frame Block
+ */
+
+.wp-block-nishiki-section {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .image-button{
+    position: absolute;
+    left:1rem;
+    top:1rem;
+  }
+
+  .container{
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+
+  @for $i from 0 through 10 {
+    $test : $i * 10;
+    $test1 : $i / 10;
+    &.image-opacity-#{$test}{
+      &::before{
+        opacity: $test1;
+      }
+    }
+  }
+
+  &.has-parallax{
+    background-attachment: fixed;
+  }
+}

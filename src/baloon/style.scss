@@ -1,8 +1,8 @@
 /**
- Hukidashi Block
+ Balloon Block
  */
 
-.wp-block-nishiki-hukidashi {
+.wp-block-nishiki-balloon {
   display: flex;
   align-items: center;
 
@@ -18,6 +18,8 @@
   }
 
   p{
+    word-break: break-all;
+
     &.text{
       position: relative;
       text-align: left;
@@ -88,7 +90,7 @@
     }
   }
 
-  &.baloon-left{
+  &.balloon-left{
     &.type-serif{
       .image{
         margin-right: 2rem;
@@ -126,7 +128,7 @@
 
   }
 
-  &.baloon-right{
+  &.balloon-right{
     flex-direction: row-reverse;
 
     &.type-serif{
@@ -183,14 +185,14 @@
 0px - 480px
 ***********************/
 @media only screen and (max-width: 480px) {
-  .wp-block-nishiki-hukidashi{
+  .wp-block-nishiki-balloon{
     display: block;
 
     .image{
      max-width:96px;
     }
 
-    &.baloon-left{
+    &.balloon-left{
       &.type-serif{
 
         p{
@@ -227,7 +229,7 @@
       }
     }
 
-    &.baloon-right{
+    &.balloon-right{
       text-align: right;
 
       &.type-serif{

@@ -11,102 +11,104 @@
  * which makes it higher in priority.
  */
 /**
- Hukidashi Block
+ Balloon Block
  */
-.wp-block-nishiki-hukidashi {
+.wp-block-nishiki-balloon {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
-  .wp-block-nishiki-hukidashi figure {
+  .wp-block-nishiki-balloon figure {
     margin: 0; }
-  .wp-block-nishiki-hukidashi figcaption {
+  .wp-block-nishiki-balloon figcaption {
     display: block;
     text-align: center;
     font-size: 0.7rem;
     margin-top: 0.2rem; }
-  .wp-block-nishiki-hukidashi p.text {
-    position: relative;
-    text-align: left; }
-  .wp-block-nishiki-hukidashi .image {
+  .wp-block-nishiki-balloon p {
+    word-break: break-all; }
+    .wp-block-nishiki-balloon p.text {
+      position: relative;
+      text-align: left; }
+  .wp-block-nishiki-balloon .image {
     -ms-flex-preferred-size: 96px;
         flex-basis: 96px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     text-align: center; }
-    .wp-block-nishiki-hukidashi .image img.icon-image {
+    .wp-block-nishiki-balloon .image img.icon-image {
       vertical-align: bottom;
       max-width: 64px; }
-  .wp-block-nishiki-hukidashi.animation-vibration p {
+  .wp-block-nishiki-balloon.animation-vibration p {
     display: inline-block;
     -webkit-animation: vibration .1s  infinite;
             animation: vibration .1s  infinite; }
-  .wp-block-nishiki-hukidashi.type-serif p {
+  .wp-block-nishiki-balloon.type-serif p {
     background: #f5f5f5;
     border-color: #f5f5f5;
     border-radius: .4em;
     padding: 1.1rem 1.4rem;
     margin: 1.5rem 0; }
-    .wp-block-nishiki-hukidashi.type-serif p::after {
+    .wp-block-nishiki-balloon.type-serif p::after {
       content: '';
       position: absolute;
       width: 0;
       height: 0;
       border: 20px solid transparent; }
-  .wp-block-nishiki-hukidashi.type-think p {
+  .wp-block-nishiki-balloon.type-think p {
     background: #f5f5f5;
     border-radius: 2rem;
     padding: 1.1rem 1.4rem;
     margin: 1.5rem 0; }
-    .wp-block-nishiki-hukidashi.type-think p::before {
+    .wp-block-nishiki-balloon.type-think p::before {
       position: absolute;
       content: '';
       border-radius: 50%;
       width: 20px;
       height: 20px;
       background: inherit; }
-    .wp-block-nishiki-hukidashi.type-think p::after {
+    .wp-block-nishiki-balloon.type-think p::after {
       position: absolute;
       content: '';
       border-radius: 50%;
       width: 10px;
       height: 10px;
       background: inherit; }
-  .wp-block-nishiki-hukidashi.baloon-left.type-serif .image {
+  .wp-block-nishiki-balloon.balloon-left.type-serif .image {
     margin-right: 2rem; }
-  .wp-block-nishiki-hukidashi.baloon-left.type-serif p::after {
+  .wp-block-nishiki-balloon.balloon-left.type-serif p::after {
     left: 0;
     top: 50%;
     border-right-color: inherit;
     border-left: 0;
     margin-top: -20px;
     margin-left: -20px; }
-  .wp-block-nishiki-hukidashi.baloon-left.type-think .image {
+  .wp-block-nishiki-balloon.balloon-left.type-think .image {
     margin-right: 2.5rem; }
-  .wp-block-nishiki-hukidashi.baloon-left.type-think p::before {
+  .wp-block-nishiki-balloon.balloon-left.type-think p::before {
     left: -22px;
     top: 7px; }
-  .wp-block-nishiki-hukidashi.baloon-left.type-think p::after {
+  .wp-block-nishiki-balloon.balloon-left.type-think p::after {
     left: -35px;
     top: 20px; }
-  .wp-block-nishiki-hukidashi.baloon-right {
+  .wp-block-nishiki-balloon.balloon-right {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-    .wp-block-nishiki-hukidashi.baloon-right.type-serif .image {
+    .wp-block-nishiki-balloon.balloon-right.type-serif .image {
       margin-left: 2rem; }
-    .wp-block-nishiki-hukidashi.baloon-right.type-serif p::after {
+    .wp-block-nishiki-balloon.balloon-right.type-serif p::after {
       right: 0;
       top: 50%;
       border-left-color: inherit;
       border-right: 0;
       margin-top: -20px;
       margin-right: -20px; }
-    .wp-block-nishiki-hukidashi.baloon-right.type-think .image {
+    .wp-block-nishiki-balloon.balloon-right.type-think .image {
       margin-left: 2.5rem; }
-    .wp-block-nishiki-hukidashi.baloon-right.type-think p::before {
+    .wp-block-nishiki-balloon.balloon-right.type-think p::before {
       right: -22px;
       top: 7px; }
-    .wp-block-nishiki-hukidashi.baloon-right.type-think p::after {
+    .wp-block-nishiki-balloon.balloon-right.type-think p::after {
       right: -35px;
       top: 20px; }
 
@@ -151,13 +153,13 @@
 0px - 480px
 ***********************/
 @media only screen and (max-width: 480px) {
-  .wp-block-nishiki-hukidashi {
+  .wp-block-nishiki-balloon {
     display: block; }
-    .wp-block-nishiki-hukidashi .image {
+    .wp-block-nishiki-balloon .image {
       max-width: 96px; }
-    .wp-block-nishiki-hukidashi.baloon-left.type-serif p {
+    .wp-block-nishiki-balloon.balloon-left.type-serif p {
       display: inline-block; }
-      .wp-block-nishiki-hukidashi.baloon-left.type-serif p::after {
+      .wp-block-nishiki-balloon.balloon-left.type-serif p::after {
         top: 0;
         left: 2.9rem;
         width: 0;
@@ -167,22 +169,22 @@
         border-top: 0;
         margin-left: -20px;
         margin-top: -20px; }
-    .wp-block-nishiki-hukidashi.baloon-left.type-think p {
+    .wp-block-nishiki-balloon.balloon-left.type-think p {
       display: inline-block; }
-      .wp-block-nishiki-hukidashi.baloon-left.type-think p::before {
+      .wp-block-nishiki-balloon.balloon-left.type-think p::before {
         left: 36px;
         top: -8px; }
-      .wp-block-nishiki-hukidashi.baloon-left.type-think p::after {
+      .wp-block-nishiki-balloon.balloon-left.type-think p::after {
         left: 47px;
         top: -20px; }
-    .wp-block-nishiki-hukidashi.baloon-right {
+    .wp-block-nishiki-balloon.balloon-right {
       text-align: right; }
-      .wp-block-nishiki-hukidashi.baloon-right.type-serif .image {
+      .wp-block-nishiki-balloon.balloon-right.type-serif .image {
         margin-left: auto;
         margin-right: 0; }
-      .wp-block-nishiki-hukidashi.baloon-right.type-serif p {
+      .wp-block-nishiki-balloon.balloon-right.type-serif p {
         display: inline-block; }
-        .wp-block-nishiki-hukidashi.baloon-right.type-serif p::after {
+        .wp-block-nishiki-balloon.balloon-right.type-serif p::after {
           top: 0;
           right: 2.9rem;
           width: 0;
@@ -192,15 +194,15 @@
           border-top: 0;
           margin-left: -20px;
           margin-top: -20px; }
-      .wp-block-nishiki-hukidashi.baloon-right.type-think .image {
+      .wp-block-nishiki-balloon.balloon-right.type-think .image {
         margin-left: auto;
         margin-right: 0; }
-      .wp-block-nishiki-hukidashi.baloon-right.type-think p {
+      .wp-block-nishiki-balloon.balloon-right.type-think p {
         display: inline-block; }
-        .wp-block-nishiki-hukidashi.baloon-right.type-think p::before {
+        .wp-block-nishiki-balloon.balloon-right.type-think p::before {
           right: 36px;
           top: -8px; }
-        .wp-block-nishiki-hukidashi.baloon-right.type-think p::after {
+        .wp-block-nishiki-balloon.balloon-right.type-think p::after {
           right: 47px;
           top: -20px; } }
 /**
@@ -220,3 +222,67 @@
  */
 .wp-block-nishiki-frame {
   margin: 1.5rem 0; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+/**
+ Frame Block
+ */
+.wp-block-nishiki-section {
+  background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative; }
+  .wp-block-nishiki-section .image-button {
+    position: absolute;
+    left: 1rem;
+    top: 1rem; }
+  .wp-block-nishiki-section .container {
+    position: relative;
+    z-index: 1; }
+  .wp-block-nishiki-section::before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5; }
+  .wp-block-nishiki-section.image-opacity-0::before {
+    opacity: 0; }
+  .wp-block-nishiki-section.image-opacity-10::before {
+    opacity: 0.1; }
+  .wp-block-nishiki-section.image-opacity-20::before {
+    opacity: 0.2; }
+  .wp-block-nishiki-section.image-opacity-30::before {
+    opacity: 0.3; }
+  .wp-block-nishiki-section.image-opacity-40::before {
+    opacity: 0.4; }
+  .wp-block-nishiki-section.image-opacity-50::before {
+    opacity: 0.5; }
+  .wp-block-nishiki-section.image-opacity-60::before {
+    opacity: 0.6; }
+  .wp-block-nishiki-section.image-opacity-70::before {
+    opacity: 0.7; }
+  .wp-block-nishiki-section.image-opacity-80::before {
+    opacity: 0.8; }
+  .wp-block-nishiki-section.image-opacity-90::before {
+    opacity: 0.9; }
+  .wp-block-nishiki-section.image-opacity-100::before {
+    opacity: 1; }
+  .wp-block-nishiki-section.has-parallax {
+    background-attachment: fixed; }
