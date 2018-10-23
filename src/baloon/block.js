@@ -180,7 +180,7 @@ registerBlockType( 'nishiki/balloon', {
 						/>
 					</div>
 					<RichText
-						style={ { background: balloonBgColor, color: balloonTextColor, fontSize: fontSize + 'px' } }
+						style={ { background: balloonBgColor, border: balloonBgColor, color: balloonTextColor, fontSize: fontSize + 'px' } }
 						tagName="p"
 						onChange={ ( value ) => setAttributes( { content: value } ) }
 						value={ content }
@@ -235,7 +235,7 @@ registerBlockType( 'nishiki/balloon', {
 				</div>
 				<RichText.Content
 					className={ 'text' }
-					style={ { background: balloonBgColor, color: balloonTextColor, fontSize: fontSize + 'px' } }
+					style={ { background: balloonBgColor, border: balloonBgColor, color: balloonTextColor, fontSize: fontSize + 'px' } }
 					tagName="p"
 					value={ content }
 				/>
