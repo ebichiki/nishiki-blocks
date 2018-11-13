@@ -65,6 +65,7 @@ function nishiki_blocks_cgb_editor_assets() {
 add_action( 'enqueue_block_editor_assets', 'nishiki_blocks_cgb_editor_assets' );
 
 // Add Block Category,
+/*
 add_filter( 'block_categories', function( $categories, $post ) {
 	return array_merge(
 		$categories,
@@ -76,3 +77,18 @@ add_filter( 'block_categories', function( $categories, $post ) {
 		)
 	);
 }, 10, 2 );
+*/
+
+function nishiki_blocks_categories( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'nishiki-blocks',
+				'title' => __( 'Nishiki Blocks（Beta）', 'nishiki' ),
+				'icon'  => '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z" /><path d="M19 13H5v-2h14v2z" /></svg>',
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'nishiki_blocks_categories', 10, 2 );
