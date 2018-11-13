@@ -11,8 +11,8 @@ import './editor.scss';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
-const { RangeControl, RadioControl, PanelBody, Button, PanelColor } = wp.components;
-const { InnerBlocks, InspectorControls, ColorPalette } = wp.editor;
+const { RangeControl, RadioControl, PanelBody, Button, ColorPalette } = wp.components;
+const { InnerBlocks, InspectorControls, PanelColorSettings } = wp.editor;
 const { Fragment } = wp.element;
 const BlockIcon = (
 	<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
@@ -128,20 +128,24 @@ registerBlockType( 'nishiki/frame', {
 						] }
 						onChange={ onChangeborderStyle }
 					/>
-					<PanelColor title={ __( '枠線のカラー' ) } colorValue={ borderColor } initialOpen={ true }>
-						<ColorPalette
-							value={ borderColor }
-							onChange={ ( value ) => setAttributes( { borderColor: value } ) }
-						/>
-					</PanelColor>
-					<PanelColor title={ __( '枠線の背景カラー' ) } colorValue={ borderBgColor } initialOpen={ true }>
-						<ColorPalette
-							value={ borderBgColor }
-							onChange={ ( value ) => setAttributes( { borderBgColor: value } ) }
-						/>
-					</PanelColor>
+					<PanelColorSettings
+						title={ __( '色設定' ) }
+						initialOpen={ true }
+						colorSettings={ [
+							{
+								value: borderColor,
+								onChange: ( value ) => setAttributes( { borderColor: value } ),
+								label: __( '枠線のカラー' ),
+							},
+							{
+								value: borderBgColor,
+								onChange: ( value ) => setAttributes( { borderBgColor: value } ),
+								label: __( '枠線の背景カラー' ),
+							},
+						] }
+					>
+					</PanelColorSettings>
 				</InspectorControls>
-
 				<div
 					className={ className }
 					style={ {

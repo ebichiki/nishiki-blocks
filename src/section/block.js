@@ -14,8 +14,8 @@ import classnames from 'classnames';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
-const { RangeControl, RadioControl, PanelBody, Button, PanelColor, ToggleControl } = wp.components;
-const { InnerBlocks, InspectorControls, ColorPalette, BlockControls, BlockAlignmentToolbar, MediaUpload } = wp.editor;
+const { RangeControl, RadioControl, PanelBody, Button, PanelColor, ToggleControl, ColorPalette } = wp.components;
+const { InnerBlocks, InspectorControls, PanelColorSettings, BlockControls, BlockAlignmentToolbar, MediaUpload } = wp.editor;
 const { Fragment } = wp.element;
 const { createHigherOrderComponent } = wp.compose;
 const { addFilter } = wp.hooks;
@@ -100,7 +100,9 @@ registerBlockType( 'nishiki/section', {
 			}
 		);
 
-		return [
+		const ImageUrl = backgroundImage ? `url(${backgroundImage})` : 'none';
+
+		return (
 			<Fragment>
 				<BlockControls>
 					<BlockAlignmentToolbar
@@ -124,12 +126,18 @@ registerBlockType( 'nishiki/section', {
 						/>
 					</PanelBody>
 					<PanelBody title="画像設定">
-						<PanelColor title={ __( 'オーバーレイ' ) } colorValue={ overlay } initialOpen={ true }>
-							<ColorPalette
-								value={ overlay }
-								onChange={ ( value ) => setAttributes( { overlay: value } ) }
-							/>
-						</PanelColor>
+						<PanelColorSettings
+							title={ __( '色設定' ) }
+							initialOpen={ true }
+							colorSettings={ [
+								{
+									value: overlay,
+									onChange: ( value ) => setAttributes( { overlay: value } ),
+									label: __( 'オーバーレイ' ),
+								},
+							] }
+						>
+						</PanelColorSettings>
 						<RangeControl
 							label={ __( '背景画像の透明度（％）' ) }
 							value={ opacity }
@@ -146,7 +154,7 @@ registerBlockType( 'nishiki/section', {
 					style={ {
 						minHeight: height + 'px',
 						backgroundColor: overlay,
-						backgroundImage: `url(${ backgroundImage })`,
+						backgroundImage: ImageUrl,
 					} }
 				>
 					<MediaUpload
@@ -168,7 +176,7 @@ registerBlockType( 'nishiki/section', {
 				</div>
 
 			</Fragment>
-		];
+		);
 
 	},
 
@@ -201,13 +209,15 @@ registerBlockType( 'nishiki/section', {
 			}
 		);
 
+		const ImageUrl = backgroundImage ? `url(${backgroundImage})` : 'none';
+
 		return (
 			<div
 				className={ classes }
 				style={ {
 					minHeight: height + 'px',
 					backgroundColor: overlay,
-					backgroundImage: `url(${backgroundImage})`,
+					backgroundImage: ImageUrl,
 				} }
 			>
 				<div className={ 'container' }>
