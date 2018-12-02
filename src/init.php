@@ -47,7 +47,7 @@ function nishiki_blocks_cgb_editor_assets() {
 	wp_enqueue_script(
 		'nishiki_blocks-cgb-block-js', // Handle.
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), // Dependencies, defined above.
+		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor' ), // Dependencies, defined above.
 		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
 		true // Enqueue the script in the footer.
 	);
@@ -86,7 +86,7 @@ function nishiki_blocks_categories( $categories, $post ) {
 			array(
 				'slug' => 'nishiki-blocks',
 				'title' => __( 'Nishiki Blocks（Beta）', 'nishiki' ),
-				'icon'  => '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z" /><path d="M19 13H5v-2h14v2z" /></svg>',
+				'icon'  => 'grid-view',
 			),
 		)
 	);
