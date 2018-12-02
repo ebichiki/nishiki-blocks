@@ -21,3 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Block Initializer.
  */
 require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
+
+// Update Checker.
+require 'updatechecker/plugin-update-checker.php';
+$nishiki_blocks_UpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/s56bouya/nishiki-blocks/',
+	__FILE__,
+	'nishiki-blocks'
+);
