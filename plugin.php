@@ -5,7 +5,7 @@
  * Description: Gutenberg extension block for Nishiki theme
  * Author: s56bouya
  * Author URI: https://www.imamura.biz/blog/
- * Version: 1.0.6
+ * Version: 1.0.7
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
